@@ -1,0 +1,204 @@
+:root {
+    --bs-text-color: #b8b8b8;
+    --bs-body-bg: #0f172a;
+    --bs-body-color: #e2e8f0;
+    --bs-primary: #3b82f6;
+    --bs-dark-card: #1e293b;
+    --bs-input-bg: #334155;
+
+    color-scheme: dark;
+}
+
+*,
+*:before,
+*:after {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bs-text-color);
+    background-color: var(--body-color) !important;
+    font-family: "Poppins", sans-serif;
+    /* make space for fixed navbar */
+}
+
+/* Start Screen */
+.start-screen {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bs-body-bg) !important;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.wox-logo {
+    width: 180px;
+    max-width: 60%;
+    transition: all 1s ease-in-out;
+}
+
+.wox-logo:hover {
+    transform: rotate(360deg);
+}
+
+.getStartedBtn {
+    background-color: var(--bs-primary);
+    color: var(--bs-body-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    font-size: 1rem;
+}
+
+.getStartedBtn:hover {
+    background-color: var(--bs-primary);
+    box-shadow: 0 0 1rem var(--bs-primary);
+}
+
+/* Responsive Logo/Text/Button */
+@media (max-width: 576px) {
+    .wox-logo {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
+
+    .getStartedBtn {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .wox-logo {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .slogan {
+        font-size: 1.1rem;
+    }
+
+    .getStartedBtn {
+        font-size: 1rem;
+        padding: 0.5rem 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .wox-logo {
+        width: 200px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .slogan {
+        font-size: 1.25rem;
+    }
+
+    .getStartedBtn {
+        font-size: 1.1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Navbar */
+.bg-dark-custom {
+    background-color: var(--bs-dark-card) !important;
+}
+
+/* Conversion Interface */
+.conversion-interface {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Input/Select Fields */
+.form-control,
+.form-select {
+    background-color: var(--bs-input-bg) !important;
+    color: var(--bs-body-color) !important;
+    border: 1px solid #475569;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.5);
+}
+
+/* Converter buttons */
+.converter-select-button {
+    transition: all 0.2s;
+    color: var(--bs-body-color);
+    background-color: var(--bs-dark-card);
+    border: 1px solid #334155;
+    padding: 0.5rem 1rem;
+    border-radius: 50rem;
+}
+
+.converter-select-button:hover:not(.active) {
+    background-color: #334155;
+    color: var(--bs-body-color);
+}
+
+.converter-select-button.active {
+    background-color: var(--bs-primary);
+    color: white;
+    border-color: var(--bs-primary);
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.4);
+}
+
+/* Switch button animation */
+#switch-button {
+    transition: transform 0.1s ease-out;
+}
+
+#switch-button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive conversion panel */
+@media (max-width: 767px) {
+    .conversion-interface {
+        margin-top: 15rem !important;
+    }
+    .conversion-interface .row {
+        flex-direction: column;
+    }
+
+    .conversion-interface .col-12 {
+        width: 100%;
+    }
+
+    #switch-button {
+        margin: 1rem auto;
+    }
+}
