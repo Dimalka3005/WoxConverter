@@ -154,6 +154,11 @@ body {
     box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.5);
 }
 
+.form-control::placeholder,
+.form-select::placeholder {
+    color: var(--bs-text-color);
+}
+
 /* Converter buttons */
 .converter-select-button {
     transition: all 0.2s;
