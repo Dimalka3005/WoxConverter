@@ -61,7 +61,7 @@ const conversionTypes = {
     },
   },
   Mass: {
-    icon: "scale",
+    icon: "bag",
     baseUnit: "kg",
     units: ["mcg", "mg", "g", "kg", "mt", "oz", "lb", "t"],
     rates: {
