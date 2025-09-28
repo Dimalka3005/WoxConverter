@@ -25,7 +25,7 @@ Built with **HTML, CSS, JavaScript, and Bootstrap**.
 ![Start Screen](./src/screenshots/start-screen.png)
 
 ### Converter Interface
-![Converter](./src/screenshots/converter.png)
+![Converter](./src/screenshots/converter-screen.png)
 
 ---
 
